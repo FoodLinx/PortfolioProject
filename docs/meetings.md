@@ -1,23 +1,27 @@
 # Meetings
 
-- Meeting 5 June 2023
+## Minutes from meeting 5 June 2023
 
-Agenda
+### Agenda
 
 1. Teams (backend or frontend)
 2. Features
 3. Deadlines
 4. Project pitch
 
-Team Selection
+### Team Selection
 
 - backend-api - GoogleApi, models, etc [Simphiwe, Ifiko, Elijah]
 - frontend - react [Semukelo and Elijah]
 - Infrastructure - databases and hosting [Simphiwe]
 - UI Design - logo, color scheme, etc [Semukelo]
 
-Deadlines
+### Deadlines
 
 - List of features by 6th June 2023 20:00
 - All coding done by 14th June 2023 20:00
 - Portfolio Pitch on the 6th June 2023 20:00 at the meeting
+
+## Minutes from our meeting 6 June 2023
+
+### List of features
