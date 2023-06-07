@@ -24,4 +24,7 @@
 
 ## Minutes from our meeting 6 June 2023
 
-### List of features
+- each person has to decide which part of the code he will like to code
+- update the trello board
+- respond to WhatsApp message at least 15 min
+- add more features
