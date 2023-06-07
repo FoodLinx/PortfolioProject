@@ -41,4 +41,3 @@
 | Process Order | All unfilfiled but paid new orders will be listed for processing by the resturant and have their status of the order changed to waiting for collection when processed | UI, MongoDB |
 | View Fulfiled Orders | Check the status of fulfilled orders (delivered, out on delivery, undelivered) | UI, MongDB |
 | Logout | Users with accounts should be be able to logout of their account | UI, OAuth, MongoDB, Redis cache |
-
