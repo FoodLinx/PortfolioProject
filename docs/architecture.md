@@ -2,11 +2,11 @@
 
 - Auth
 
-Title|Description|Url|
-User|User must have a login page and a registration page.| **foodlinx/user/login**, **foodlinx/user/registration**|
-Admin|Admins must have their own unique login page.| **foodlinx/admin/login**|
-Delivery|Delivery man have their own unique login and registration page| **foodlinx/delivery/login**, **foodlinx/delivery/registration**|
-Restaurants|Restaurants have their own registration and login page|**foodlinx/restaurant/login**, **foodlinx/restaurant/registartion**|
+| Title | Description | Url |
+| User | User must have a login page and a registration page. | **foodlinx/user/login**, **foodlinx/user/registration** |
+| Admin | Admins must have their own unique login page. | **foodlinx/admin/login** |
+| Delivery | Delivery man have their own unique login and registration page | **foodlinx/delivery/login**, **foodlinx/delivery/registration** |
+| Restaurants | Restaurants have their own registration and login page | **foodlinx/restaurant/login**, **foodlinx/restaurant/registartion** |
 
 ## For User Registration
 - Name
@@ -51,4 +51,4 @@ Restaurants|Restaurants have their own registration and login page|**foodlinx/re
 - Email Address
 - Password
 
-
+Date - 07 Jun 23
