@@ -3,6 +3,7 @@
 - Auth
 
 | Title | Description | Url |
+| ----- | ----------- | --- |
 | User | User must have a login page and a registration page. | **foodlinx/user/login**, **foodlinx/user/registration** |
 | Admin | Admins must have their own unique login page. | **foodlinx/admin/login** |
 | Delivery | Delivery man have their own unique login and registration page | **foodlinx/delivery/login**, **foodlinx/delivery/registration** |
