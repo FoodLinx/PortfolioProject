@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <h1>FoodLinx</h1>
+        <h1>FoodLinx HomePage</h1>
       </div>
     </main>
   )
