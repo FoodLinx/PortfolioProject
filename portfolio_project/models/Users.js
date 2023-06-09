@@ -11,14 +11,16 @@ const userSchema = new BaseSchema({
         required: true,
         unique: true
     },
-    isAdmin: {
-        type: Boolean,
-        default: false
-    },
     password: {
       type: String,
       required: true
+    },
+    phone: {
+      type: String,
+      required: true,
+      unique: true
     }
+
 })
 
 const Users = models.Users || model('Users', userSchema)
