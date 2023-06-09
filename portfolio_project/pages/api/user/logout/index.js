@@ -2,14 +2,15 @@ import useMiddleWare from "@/lib/MiddleWares"
 import redisClient from "@/lib/RedisClient"
 
 async function handler(req, res) {
-  if (req.method !== 'GET') {
+  if (req.method !== 'POST') {
     res.status(405).json({
       error: 'Only request method POST are allowed'
     })
     return
   }
-  await redisClient.del(`auth_${req.xtoken}`);
-  return res.status(204).send();
+  console.log(req.xtoken);
+  await redisClient.del(`auth_${req.headers.authorization}`);
+  return res.status(204).json({'message': 'logout successfully'});
 }
 
 export default useMiddleWare('authenticate')(handler)

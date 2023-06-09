@@ -24,7 +24,7 @@ export default async function handler(req, res) {
     if (!user) {
       return res.status(400).json({ error: 'User does not exists' });
     }
-    console.log(user)
+    
     const isMatch = await verifyPassword(password, user.password)
     if (!isMatch) {
       return res.status(400).json({ error: 'Password does not match' });
