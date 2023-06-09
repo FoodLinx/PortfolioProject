@@ -15,16 +15,17 @@ class RedisClient {
   }
 
   isAlive () {
-    return this.client.PING === 'PONG'
+    return this.isClientAlive
   }
 
   async get (key) {
-    return promisify(this.client.get).bind(this.client)(key);
+    const result = await this.client.get('PING');
+    console.log(result);
+    return null
   }
 
   async set (key, value, duration) {
-    await promisify(this.client.setex)
-      .bind(this.client)(key, duration, value);
+    await this.client.setEx(key, duration, value);
   }
 
   async del (key) {
