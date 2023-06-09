@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import { verifyPassword } from "@/lib/HashUnhash";
+import redisClient from '@/lib/RedisClient';
 import { connectMongoDB } from "@/lib/MongoConnect";
 import Users from "@/models/Users";
 
@@ -23,7 +24,7 @@ export default async function handler(req, res) {
     if (!user) {
       return res.status(400).json({ error: 'User does not exists' });
     }
-    console.log(user.password)
+    console.log(user)
     const isMatch = await verifyPassword(password, user.password)
     if (!isMatch) {
       return res.status(400).json({ error: 'Password does not match' });

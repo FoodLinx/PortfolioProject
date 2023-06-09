@@ -6,5 +6,8 @@ export const connectMongoDB = async () => {
     }
     const uri = process.env.MONGO_URI
     if (!uri) throw new Error('MONGO URI does not exist in environment')
-    return await mongoose.connect(process.env.MONGO_URI)
+    const options = {
+      useNewUrlParser: true,
+    }
+    return await mongoose.connect(process.env.MONGO_URI, options)
 }

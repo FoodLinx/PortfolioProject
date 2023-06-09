@@ -27,8 +27,12 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Already exist' });
     }
     password = await hashPassword(password)
-    
-    const newUser = await Users.create({ email, password: hashPassword(password), name })
+
+    const newUser = await Users.create({
+      email,
+      password,
+      name
+    })
 
     return res.status(201).json({
         email, id: newUser._id.toString()

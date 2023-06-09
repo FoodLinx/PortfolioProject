@@ -19,13 +19,12 @@ class RedisClient {
   }
 
   async get (key) {
-    const result = await this.client.get('PING');
-    console.log(result);
-    return null
+    return promisify(this.client.get).bind(this.client)(key);
   }
 
   async set (key, value, duration) {
-    await this.client.setEx(key, duration, value);
+    await promisify(this.client.setex)
+      .bind(this.client)(key, duration, value);
   }
 
   async del (key) {

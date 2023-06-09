@@ -9,7 +9,6 @@ export async function hashPassword(password) {
 
 export async function verifyPassword(password, hashed) {
   if (!password || !hashed) return false
-  console.log(password, hashed);
   const isCorrect = await compare(password, hashed)
   return isCorrect
 }
