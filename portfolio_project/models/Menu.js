@@ -14,6 +14,9 @@ const menuSchema = new BaseSchema({
   price: {
     type: Number,
     required: true
+  },
+  image: {
+    type: String,
   }
 })
 
