@@ -27,7 +27,7 @@ export default function Home() {
           <div className={home.icon}>
             <BiCurrentLocation />
           </div>
-          <input type="text" placeholder="Enter your postcode" />
+          <input type="text" placeholder="Enter your delivery address" />
           <button>
             <FiSearch/>
             Find food
