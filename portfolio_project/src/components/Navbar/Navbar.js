@@ -21,7 +21,7 @@ export const Navbar = () => {
             Home
           </Link>
           <Link 
-          href='/'
+          href='/about'
           >
             About Us
           </Link>
