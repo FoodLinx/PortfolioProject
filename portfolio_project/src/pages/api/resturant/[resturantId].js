@@ -1,6 +1,5 @@
 import { connectMongoDB } from "@/lib/MongoConnect"
 import Resturants from "@/models/Resturants";
-import useMiddleWare from "@/lib/MiddleWares"
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -10,11 +9,12 @@ export default async function handler(req, res) {
   }
 
   try {
+    const { resturantId } = req.query
     await connectMongoDB();
-    const resturants = await Resturants.find()
-    return res.status(200).json({ resturants });
+    const resturant = await Resturants.findById(resturantId)
+    return res.status(200).json(resturant)
   } catch (error) {
-    console.error('An error occured:\n', error)
+    console.error('An error occured:\n', error.toString())
     return res.status(501).json({ error: 'An error occured' })
   }
 }

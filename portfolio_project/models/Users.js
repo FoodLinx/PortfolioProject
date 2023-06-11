@@ -17,11 +17,14 @@ const userSchema = new BaseSchema({
   },
   phone: {
     type: String,
-    required: true,
     unique: true
   },
   image: {
     type: String,
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false
   }
 })
 

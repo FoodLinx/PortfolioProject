@@ -1,4 +1,4 @@
-import { model, models } from 'mongoose';
+import { Schema, model, models } from 'mongoose';
 import BaseSchema from './baseSchema';
 
 const resturantsSchema = new BaseSchema({
@@ -16,6 +16,16 @@ const resturantsSchema = new BaseSchema({
     type: String,
     required: true,
     unique: true
+  },
+  createdBy: {
+    type: Schema.Types.ObjectId,
+    ref: 'Users',
+    required: true
+  },
+  modifiedBy: {
+    type: Schema.Types.ObjectId,
+    ref: 'Users',
+    required: true
   }
 })
 
