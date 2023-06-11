@@ -26,7 +26,7 @@ export const Navbar = () => {
             About Us
           </Link>
           <Link 
-          href='/'
+          href='/contact'
           >
             Contact
           </Link>
