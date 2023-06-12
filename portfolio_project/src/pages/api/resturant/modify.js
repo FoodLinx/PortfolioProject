@@ -1,6 +1,7 @@
 import useMiddleWare from "@/lib/MiddleWares"
 import { connectMongoDB } from "@/lib/MongoConnect"
 import Resturants from "@/models/Resturants";
+import { removeUndefinedObject } from "@/lib/Utils";
 
 async function handler(req, res) {
   if (req.method !== 'PATCH') {
@@ -13,7 +14,7 @@ async function handler(req, res) {
     await connectMongoDB();
     const { name, address, phone, resturantId } = req.body
 
-    const {_id: id, isAdmin} = req.user
+    const { _id: id, isAdmin } = req.user
 
     // check if the user is true and the user is an admin
     if (!isAdmin) {
@@ -21,10 +22,13 @@ async function handler(req, res) {
         error: 'Sorry you must be an admin to add a Resturant'
       })
     }
-    // TODO the modified resturant must remove the null parameters
-    const modifiedResturant = await Resturants.findOneAndUpdate(resturantId, {
-      name, address, phone, modifiedBy: id,
-    })
+    // the modified resturant must remove the null parameters
+    const modifiedResturant = await Resturants.findOneAndUpdate(
+      resturantId,
+      removeUndefinedObject({
+        name, address, phone, modifiedBy: id,
+      })
+    )
     return res.status(201).json({
       name, id: modifiedResturant._id.toString()
     })
