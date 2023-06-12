@@ -1,11 +1,12 @@
 "use client"
- 
+
 import Image from 'next/image'
 import home from './home.module.scss'
 import { BiCurrentLocation } from 'react-icons/bi'
 import { FiSearch } from 'react-icons/fi'
 import { Merienda } from 'next/font/google'
 import plate from '@/public/plate.png'
+import Catalog from '../components/Catalog/Catalog'
 
 const merienda = Merienda({
   subsets: ['latin-ext'],
@@ -29,7 +30,7 @@ export default function Home() {
           </div>
           <input type="text" placeholder="Enter your address" />
           <button>
-            <FiSearch/>
+            <FiSearch />
             Find food
           </button>
         </div>
@@ -37,7 +38,7 @@ export default function Home() {
 
       <div>
         {/* temporal image */}
-        <Image 
+        <Image
           src={plate}
           width={700}
           height={700}
