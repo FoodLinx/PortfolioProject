@@ -27,14 +27,14 @@ export default function Home() {
           <div className={home.icon}>
             <BiCurrentLocation />
           </div>
-          <input type="text" placeholder="Enter your delivery address" />
+          <input type="text" placeholder="Enter your address" />
           <button>
             <FiSearch/>
             Find food
           </button>
         </div>
       </div>
-      
+
       <div>
         {/* temporal image */}
         <Image 
