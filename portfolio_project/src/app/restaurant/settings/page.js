@@ -1,11 +1,10 @@
-import React from 'react';
+import React from 'react'
+import styles from './page.module.css'
 
-const Profile = () => {
+const RestaurantSettings = () => {
   return (
-    <div>
-      Restaurant Profile Page
-    </div>
-  );
-};
+    <div>RestaurantSettings</div>
+  )
+}
 
-export default Profile;
+export default RestaurantSettings
