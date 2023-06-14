@@ -1,17 +1,18 @@
 import React from "react";
-import axios from "axios"
 import styles from "./page.module.css";
+import axios from "axios";
 import Orders from "@/src/components/Orders/Orders";
 
-const page = ({ orders }) => {
+const OrdersInProgress = ({ orders }) => {
   return (
     <>
       <div className={styles.container}>
         <div className={styles.wrapper}>
-          <h4 className={styles.title}>Available orders For Pick Up</h4>
+          <div className={styles.title}>
+            <h2>Current orders in progress</h2>
+          </div>
           <div className={styles.orders}>
-            {/* Will display a list of meals ready for pickup */}
-            <Orders />
+            <Orders orders={orders} />
           </div>
         </div>
       </div>
@@ -19,14 +20,11 @@ const page = ({ orders }) => {
   );
 };
 
-export default page;
-
-// Create a function that will call the API endpoint.
-// @/api/delivery/orders/ready
+export default OrdersInProgress;
 
 export async function getServerSideProps() {
   const { data } = await axios.get(
-    "http://localhost:3000/api/delivery/orders/ready"
+    "http://localhost:3000/api/restaurant/order-inprogress"
   );
 
   return {

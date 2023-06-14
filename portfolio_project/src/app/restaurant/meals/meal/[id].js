@@ -61,7 +61,17 @@ const MealDetails = ({ meal }) => {
 
 export default MealDetails
 
+export async function getServerSideProps() {
+  const { data } = await axios.get(
+    `http://localhost:3000/api/restaurant/meals/${id}`
+  );
 
+  return {
+    props: {
+      orders: data,
+    },
+  };
+}
 
 
 

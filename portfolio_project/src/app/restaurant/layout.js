@@ -1,5 +1,3 @@
-import RestaurantNavbar from "@/src/components/Navbar/RestaurantNavbar";
-import RestaurantFooter from "@/src/components/Footer/RestaurantFooter";
 import "./page.module.css";
 import { Inter } from "next/font/google";
 
@@ -12,14 +10,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div className="container">
-          <RestaurantNavbar />
-          {children}
-          <RestaurantFooter />
-        </div>
-      </body>
-    </html>
+    <div>
+      {children}
+    </div>
   );
 }

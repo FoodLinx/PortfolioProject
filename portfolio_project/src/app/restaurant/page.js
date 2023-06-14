@@ -19,9 +19,19 @@ export default function RestaurantHomePage({ meals }) {
       </Head>
       <div>
         <Hero />
-        <Catalog meals={meals} />
       </div>
     </>
   )
 }
 
+export async function getServerSideProps() {
+  const { data } = await axios.get(
+    "http://localhost:3000/api/restaurant"
+  );
+
+  return {
+    props: {
+      orders: data,
+    },
+  };
+}

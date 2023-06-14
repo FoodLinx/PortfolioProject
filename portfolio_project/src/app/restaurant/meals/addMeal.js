@@ -4,30 +4,41 @@ import classes from './addMeal.module.css';
 
 
 const AddMeal = () => {
+  const [title, setTitle] = useState("")
+  const [desc, setDesc] = useState("")
+  const [category, setCategory] = useState("pizza")
+  const [price, setPrice] = useState(50)
+  const [photo, setPhoto] = useState("")
   
+  const handleSubmit = async (e) => {
+    e.preventDefault
+
+    const status = await getServerSideProps()
+  }
+
   return (
     <>
       <div className={classes.container}>
         <div className={classes.wrapper}>
           <h2>Add Meal</h2>
           <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Title..." onChange={""} />
-            <input type="text" placeholder="Desc..." onChange={""} />
-            <select onChange={""}>
+            <input type="text" placeholder="Title..." onChange={(e) => setTitle(e.target.value)} />
+            <input type="text" placeholder="Desc..." onChange={(e) => setDesc(e.target.value)} />
+            <select onChange={(e) => setCategory(e.target.value)}>
               <option disabled>Select Category</option>
               <option value="pizza">Breakfast</option>
               <option value="burger">Burger</option>
               <option value="gyros">Pizza</option>
               <option value="spaghetti">Beef</option>
-              <option value="bread">chicken</option>
-              <option value="vegeterian">Seafood</option>
+              <option value="bread">Chicken</option>
+              <option value="seafood">Seafood</option>
             </select>
-            <input type="number" placeholder="Price..." onChange={""} />
+            <input type="number" placeholder="Price..." onChange={(e) => setPrice(e.target.value)} />
             <div className={classes.imageField}>
               <label htmlFor='image'>
                 Photo <AiOutlineFileImage size={25} />
               </label>
-              <input id="image" type='file' style={{ display: 'none' }} onChange={""} />
+              <input id="image" type='file' style={{ display: 'none' }} onChange={(e) => setPhoto(e.target.files[0])} />
             </div>
             <button>Post</button>
           </form>
@@ -39,73 +50,30 @@ const AddMeal = () => {
 
 export default AddMeal
 
+export async function getServerSideProps() {
+  const { data } = await axios.post(
+    "http://localhost:3000/api/restaurant/meal/addmeal",
+    {
+      title,
+      desc,
+      category,
+      price,
+      image: imageUrl
+    }
+  );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  return {
+    props: {
+      meal: data,
+    },
+  };
+}
 
 // (e) => setTitle(e.target.value)
 // (e) => setDesc(e.target.value)
 // (e) => setCategory(e.target.value)
 // (e) => setPrice(e.target.value)
 //  (e) => setPhoto(e.target.files[0])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // const [title, setTitle] = useState("")
   // const [desc, setDesc] = useState("")
