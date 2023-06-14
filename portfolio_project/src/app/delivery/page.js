@@ -4,12 +4,14 @@ import { Footer } from "@/src/components/Footer/Footer";
 import Head from "next/head";
 import { Navbar } from "@/src/components/Navbar/Navbar";
 import DeliveryMan from "@/public/Delivery/pexels-artem-podrez-8988480.jpg";
+import styles from "./page.module.css"
+import Image from "next/image"
 // We will have to import a custom Delivery NavBar
 
 
 const DeliveryPage = ({ data }) => {
   // const handleClick = () => {
-    
+
   // }
   return (
     <>
@@ -23,7 +25,7 @@ const DeliveryPage = ({ data }) => {
         <div className={styles.container}>
           <div className={styles.wrapper}>
             <div className={styles.left}>
-              <Image src={DeliveryMan} alt="Delievry Man"/>
+              <Image src={DeliveryMan} alt="Delievry Man" />
             </div>
             <div className={styles.right}>
               <div className={styles.title}>
@@ -36,7 +38,7 @@ const DeliveryPage = ({ data }) => {
                 <button className={styles.aboutUs} onClick={{}}>
                   About Us
                 </button>
-                <button className={styles.register} onClick={() => console.log("Register Now button clicked") }> // should pass the url for signing up when the button is clicked. for now it will output to  the console.
+                <button className={styles.register} onClick={() => console.log("Register Now button clicked")}> // should pass the url for signing up when the button is clicked. for now it will output to  the console.
                   Register!!
                 </button>
               </div>
@@ -54,14 +56,14 @@ const DeliveryPage = ({ data }) => {
 
 export default DeliveryPage;
 
-export async function getServerSideProps() {
-  const { data } = await axios.get(
-    "http://localhost:3000/api/auth/sign-up"
-  );
+// export async function getServerSideProps() {
+//   const { data } = await axios.get(
+//     "http://localhost:3000/api/auth/sign-up"
+//   );
 
-  return {
-    props: {
-      orders: data,
-    },
-  };
-}
+//   return {
+//     props: {
+//       orders: data,
+//     },
+//   };
+// }

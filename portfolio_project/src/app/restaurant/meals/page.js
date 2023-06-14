@@ -18,14 +18,14 @@ const restaurantItems = ({meals}) => {
 
 export default restaurantItems
 
-export async function getServerSideProps() {
-  const { data } = await axios.get(
-    "http://localhost:3000/api/restaurant/meals"
-  );
+// export async function getServerSideProps() {
+//   const { data } = await axios.get(
+//     "http://localhost:3000/api/restaurant/meals"
+//   );
 
-  return {
-    props: {
-      orders: data,
-    },
-  };
-}
+//   return {
+//     props: {
+//       orders: data,
+//     },
+//   };
+// }

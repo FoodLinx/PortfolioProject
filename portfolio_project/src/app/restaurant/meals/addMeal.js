@@ -50,24 +50,24 @@ const AddMeal = () => {
 
 export default AddMeal
 
-export async function getServerSideProps() {
-  const { data } = await axios.post(
-    "http://localhost:3000/api/restaurant/meal/addmeal",
-    {
-      title,
-      desc,
-      category,
-      price,
-      image: imageUrl
-    }
-  );
+// export async function getServerSideProps() {
+//   const { data } = await axios.post(
+//     "http://localhost:3000/api/restaurant/meal/addmeal",
+//     {
+//       title,
+//       desc,
+//       category,
+//       price,
+//       image: imageUrl
+//     }
+//   );
 
-  return {
-    props: {
-      meal: data,
-    },
-  };
-}
+//   return {
+//     props: {
+//       meal: data,
+//     },
+//   };
+// }
 
 // (e) => setTitle(e.target.value)
 // (e) => setDesc(e.target.value)

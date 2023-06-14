@@ -27,14 +27,14 @@ const Profile = ({ driver }) => {
 export default Profile;
 
 
-export async function getServerSideProps() {
-  const { data } = await axios.get(
-    "http://localhost:3000/api/delivery/profile"
-  );
+// export async function getServerSideProps() {
+//   const { data } = await axios.get(
+//     "http://localhost:3000/api/delivery/profile"
+//   );
 
-  return {
-    props: {
-      driver: data,
-    },
-  };
-}
+//   return {
+//     props: {
+//       driver: data,
+//     },
+//   };
+// }

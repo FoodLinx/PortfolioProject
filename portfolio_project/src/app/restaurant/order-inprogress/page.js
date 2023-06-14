@@ -22,14 +22,14 @@ const OrdersInProgress = ({ orders }) => {
 
 export default OrdersInProgress;
 
-export async function getServerSideProps() {
-  const { data } = await axios.get(
-    "http://localhost:3000/api/restaurant/order-inprogress"
-  );
+// export async function getServerSideProps() {
+//   const { data } = await axios.get(
+//     "http://localhost:3000/api/restaurant/order-inprogress"
+//   );
 
-  return {
-    props: {
-      orders: data,
-    },
-  };
-}
+//   return {
+//     props: {
+//       orders: data,
+//     },
+//   };
+// }

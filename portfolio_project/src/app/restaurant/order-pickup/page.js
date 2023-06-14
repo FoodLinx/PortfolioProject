@@ -22,14 +22,14 @@ const ordersReadyForPickup = ({orders}) => {
 
 export default ordersReadyForPickup;
 
-export async function getServerSideProps() {
-  const { data } = await axios.get(
-    "http://localhost:3000/api/restaurant/order-pickup"
-  );
+// export async function getServerSideProps() {
+//   const { data } = await axios.get(
+//     "http://localhost:3000/api/restaurant/order-pickup"
+//   );
 
-  return {
-    props: {
-      orders: data,
-    },
-  };
-}
+//   return {
+//     props: {
+//       orders: data,
+//     },
+//   };
+// }

@@ -25,14 +25,14 @@ const RestaurantSettings = ({ restaurant }) => {
 
 export default RestaurantSettings
 
-export async function getServerSideProps() {
-  const { data } = await axios.get(
-    "http://localhost:3000/api/restaurant/settings"
-  );
+// export async function getServerSideProps() {
+//   const { data } = await axios.get(
+//     "http://localhost:3000/api/restaurant/settings"
+//   );
 
-  return {
-    props: {
-      restaurant: data,
-    },
-  };
-}
+//   return {
+//     props: {
+//       restaurant: data,
+//     },
+//   };
+// }
