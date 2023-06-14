@@ -1,9 +1,11 @@
+"use client"
+
 import React from 'react'
 import styles from './page.module.css'
 import Catalog from '@/src/components/Catalog/Catalog'
 import axios from 'axios'
 
-const restaurantItems = ({meals}) => {
+const restaurantItems = ({ meals }) => {
 
   return (
     <div className={styles.container}>

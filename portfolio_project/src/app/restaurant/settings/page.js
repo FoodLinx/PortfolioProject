@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import styles from './page.module.css'
 import axios from 'axios'
@@ -27,7 +29,7 @@ export default RestaurantSettings
 
 // export async function getServerSideProps() {
 //   const { data } = await axios.get(
-//     "http://localhost:3000/api/restaurant/settings"
+//     `http://localhost:3000/api/restaurant/${id}/settings`
 //   );
 
 //   return {

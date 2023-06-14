@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import styles from "./page.module.css";
 import axios from "axios";
@@ -24,7 +26,7 @@ export default ordersReadyForPickup;
 
 // export async function getServerSideProps() {
 //   const { data } = await axios.get(
-//     "http://localhost:3000/api/restaurant/order-pickup"
+//     "http://localhost:3000/api/restaurant/${id}/order-pickup"
 //   );
 
 //   return {
