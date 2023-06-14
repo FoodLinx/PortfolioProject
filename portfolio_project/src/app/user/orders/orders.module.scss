@@ -1,4 +1,4 @@
-/* components/OrderPage.module.scss */
+
 .container {
   display: flex;
   flex-direction: row;
@@ -14,16 +14,14 @@
   font-weight: bold;
   margin-bottom: 20px;
 }
-.heading2 {
-  font-weight: bold;
+
+.order-item {
+  width: 300px;
+  height: 400px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
 }
-
-.current-order {
-
-  margin-bottom: 20px;
-}
-
-
 
 .order-item {
   margin-bottom: 10px;
