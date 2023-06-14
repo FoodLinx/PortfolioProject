@@ -1,5 +1,6 @@
 import React from 'react'
 import  classes from 'page.module.css'
+import axios from 'axios';
 
 const MealDetails = ({ meal }) => {
 

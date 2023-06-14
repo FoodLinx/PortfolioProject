@@ -5,6 +5,7 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import Catalog from '@/src/components/Catalog/Catalog'
 import Hero from '@/src/components/Hero/Hero'
+import axios from 'axios'
 
 const inter = Inter({ subsets: ['latin'] })
 

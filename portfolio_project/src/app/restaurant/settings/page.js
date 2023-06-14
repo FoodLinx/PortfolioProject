@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from './page.module.css'
+import axios from 'axios'
 
-const RestaurantSettings = () => {
+const RestaurantSettings = ({ restaurant }) => {
+  
   return (
     <>
       <div className={styles.container}>
@@ -30,7 +32,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      orders: data,
+      restaurant: data,
     },
   };
 }

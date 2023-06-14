@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { Footer } from "@/src/components/Footer/Footer";
 import Head from "next/head";
 import { Navbar } from "@/src/components/Navbar/Navbar";

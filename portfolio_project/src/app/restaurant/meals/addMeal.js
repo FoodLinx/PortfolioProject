@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { AiOutlineFileImage } from 'react-icons/ai'
 import classes from './addMeal.module.css';
-
+import axios from 'axios';
 
 const AddMeal = () => {
   const [title, setTitle] = useState("")
