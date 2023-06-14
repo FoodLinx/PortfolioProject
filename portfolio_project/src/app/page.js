@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
+      <div className={home.image}>
         {/* temporal image */}
         <Image 
           src={plate}
