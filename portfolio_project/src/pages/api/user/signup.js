@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     let { email, password, name } = req.body
 
     if (!email) {
-      return res.status(400).json({ error: 'Missing email' }).end();
+      return res.status(400).json({ error: 'Missing email' });
     }
     if (!password) {
       return res.status(400).json({ error: 'Missing password' });

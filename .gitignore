@@ -1,4 +1,5 @@
 portfolio_project/pnpm-lock.yaml
 .vscode
+db_orm
 portfolio_project/package-lock.json
 dump.rdb
