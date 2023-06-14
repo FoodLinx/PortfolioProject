@@ -1,0 +1,55 @@
+.feedContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.restaurantContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.restaurant {
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+
+  width: 400px;
+  height: 250px;
+
+  display: flex;
+}
+
+.selected {
+  background-color: lightblue;
+}
+
+.menu {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .menu_item {
+    width: 100%;
+    height: 250px;
+    border: 1px solid #ccc;
+  }
+}
+
+.dish {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.dishDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+// Add more custom styles as needed

@@ -1,0 +1,12 @@
+.container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container>body {
+  background-color: #222;
+  color: #c5850d;
+}
+
